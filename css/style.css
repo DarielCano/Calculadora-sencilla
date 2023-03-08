@@ -1,0 +1,125 @@
+:root {
+    --ppal-font: 'Roboto Condensed', sans-serif;
+    --btn-font: 'Manrope', sans-serif;
+
+
+}
+
+
+html {
+    font-size: 62.5%;
+    box-sizing: border-box;
+    /* se  aplica el box model al documento */
+
+    scroll-snap-type: y mandatory;
+    /* crea el efecto de scroll en la pagina */
+}
+
+*,
+*:before,
+*:after {
+    /* le aplica el hack para el box model a todos los elementos */
+    box-sizing: inherit;
+}
+
+body {
+    margin: 0 auto;
+    font-family: var(--ppal-font);
+
+}
+
+img {
+    width: 5rem;
+    height: 5rem;
+    background-repeat: no-repeat;
+}
+
+
+h1 {
+    text-align: center;
+
+    font-size: 3rem;
+
+}
+
+.calculadora {
+    padding-top: 1rem;
+    margin: 0 auto;
+    border: 3px solid black;
+    width: 80%;
+    max-width: 25rem;
+
+    border-radius: 10%;
+    box-shadow: 8px 10px 32px 12px rgba(0, 0, 0, 0.81);
+    -webkit-box-shadow: 8px 10px 32px 12px rgba(0, 0, 0, 0.81);
+    -moz-box-shadow: 8px 10px 32px 12px rgba(0, 0, 0, 0.81);
+
+}
+
+.contenedor-ppal {
+    width: 100%;
+    margin: 0 auto;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+
+}
+
+.pantalla {
+
+    margin: 0 auto;
+    margin-top: 1rem;
+    border: 1px solid black;
+    padding-top: 1rem;
+    background-color: white;
+    width: 90%;
+}
+
+p {
+    margin: 0 auto;
+    text-align: right;
+    width: 90%;
+    height: 2rem;
+    margin-bottom: 2rem;
+    font-size: 3rem;
+
+}
+
+
+
+.botones {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    column-gap: 0.5rem;
+    margin-left: 2rem;
+    margin-top: 2rem;
+    font-family: var(--btn-font);
+
+}
+
+.borrar {
+    grid-column: 4;
+    margin-left: 0.1rem;
+}
+
+.botones__boton {
+    border: 2px solid black;
+    margin-bottom: 1rem;
+    width: 4rem;
+    height: 4rem;
+    text-align: center;
+
+    font-size: 3rem;
+    font-weight: bold;
+}
+
+
+
+.botones__boton:hover {
+    cursor: pointer;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    transition: all 0.5s ease;
+}
